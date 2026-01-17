@@ -6,18 +6,17 @@ class clsPerson
 private:
     string _firstname, _lastname, _Email, _phone;
     int _id;
-public:
-    static int counter;
-    clsPerson(string first, string last, string email, string phone)
-    {
-        counter++;
 
-        _id = counter;
+public:
+    clsPerson(int id, string first, string last, string email, string phone)
+    {
+        _id = id;
         _firstname = first;
         _lastname = last;
         _Email = email;
         _phone = phone;
     }
+
     int Id()
     {
 
@@ -70,43 +69,134 @@ public:
     }
     void sendEmail(string subject, string Body)
     {
-        cout << "-------------------------------------------------------------------------\n";
+
         cout << "The following message sent successfully to email: " << _Email << endl;
         cout << "subject :" << subject << endl;
         cout << "Body    :" << Body << endl;
-        cout << "-------------------------------------------------------------------------\n";
     }
     void sendSMS(string about)
     {
-        cout << "-------------------------------------------------------------------------\n";
+
         cout << "The following SMS sent successfully to Phone:" << _phone << endl;
         cout << about << endl;
-        cout << "-------------------------------------------------------------------------\n";
     }
     void print()
     {
 
         cout << "info :\n";
-        cout << "----------------------------\n";
+        cout << "-----------------\n";
         cout << "ID        :" << _id << endl;
         cout << "First Name:" << _firstname << endl;
         cout << "Last Name :" << _lastname << endl;
         cout << "Full Name :" << Fullname() << endl;
         cout << "Email     :" << _Email << endl;
         cout << "Phone     :" << _phone << endl;
-        cout << "----------------------------\n";
+        cout << "-----------------\n";
     }
 };
-int clsPerson::counter = 0;
+class clsEmployee : public clsPerson
+{
+    float _salary;
+    string _Department, _Title;
+
+public:
+    clsEmployee(int id, string Firstname, string Lastname, string email, string phone, string Tilte, string Department, float salary)
+        : clsPerson(id, Firstname, Lastname, email, phone)
+    {
+        _salary = salary;
+        _Department = Department;
+        _Title = Tilte;
+    }
+
+    void setTitle(string tilte)
+    {
+
+        _Title = tilte;
+    }
+    string Title()
+    {
+        return _Title;
+    }
+    void setSalary(float salary)
+    {
+        _salary = salary;
+    }
+    float Salary()
+    {
+
+        return _salary;
+    }
+    void setDepartment(string Department)
+    {
+        _Department = Department;
+    }
+    string Department()
+    {
+
+        return _Department;
+    }
+    void print()
+    {
+        {
+
+            cout << "info :\n";
+            cout << "-----------------\n";
+            cout << "ID        :" << Id() << endl;
+            cout << "First Name:" << FirstName() << endl;
+            cout << "Last Name :" << LastName() << endl;
+            cout << "Full Name :" << Fullname() << endl;
+            cout << "Email     :" << Email() << endl;
+            cout << "Phone     :" << phone() << endl;
+            cout << "Title     :" << _Title << endl;
+            cout << "Salary    :" << _salary << endl;
+            cout << "Department:" << _Department << endl;
+            cout << "-----------------\n";
+        }
+    }
+};
+class clsProgrammer : public clsEmployee
+{
+
+    string _MainProgrammingLanguage;
+
+public:
+    clsProgrammer(int id, string Firstname, string Lastname, string email, string phone, string Tilte, string Department, float salary, string MainProgrammingLanguage)
+        : clsEmployee(id, Firstname, Lastname, email, phone, Tilte, Department, salary)
+    {
+
+        _MainProgrammingLanguage = MainProgrammingLanguage;
+    }
+    void setMainProgrammingLanguage(string MainProgrammingLanguage)
+    {
+
+        _MainProgrammingLanguage = MainProgrammingLanguage;
+    }
+    string MainProgrammingLanguage()
+    {
+
+        return _MainProgrammingLanguage;
+    }
+
+    void print()
+    {
+        cout << "info :\n";
+        cout << "----------------------------------------------------\n";
+        cout << "ID                     :" << Id() << endl;
+        cout << "First Name             :" << FirstName() << endl;
+        cout << "Last Name              :" << LastName() << endl;
+        cout << "Full Name              :" << Fullname() << endl;
+        cout << "Email                  :" << Email() << endl;
+        cout << "Phone                  :" << phone() << endl;
+        cout << "Title                  :" << Title() << endl;
+        cout << "Salary                 :" << Salary() << endl;
+        cout << "Department             :" << Department() << endl;
+        cout << "MainProgrammingLanguage:" << _MainProgrammingLanguage << endl;
+        cout << "-----------------------------------------------------\n";
+    }
+};
 int main()
 {
-    clsPerson person1("Loay", "Alarify", "loayalarify777184509@gmail.com", "+967733693579");
-    person1.print();
-    person1.sendEmail("Hi", "How Are You?");
-    person1.sendSMS("Hi Ahmed");
-   cout<< person1.Id()<<endl;
-    clsPerson person2("nezar", "Alarify", "nezar@gmail.com", "+96771823579");
-    person2.print();
-   cout<< person2.Id()<<endl;
-   
+
+    clsProgrammer pro1(10, "Loay", "Alarify", "loa@gmail", "777", "Eng", "IT", 2000, "C++");
+    pro1.print();
 }
