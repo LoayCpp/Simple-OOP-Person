@@ -3,206 +3,204 @@ using namespace std;
 class clsPerson
 {
 
-private:
-    string _firstname, _lastname, _Email, _phone;
-    int _id;
+    short _ID;
+    string _Name;
+    string _Phone;
 
 public:
-    clsPerson(int id, string first, string last, string email, string phone)
+    clsPerson(short ID, string Name, string Phone)
     {
-        _id = id;
-        _firstname = first;
-        _lastname = last;
-        _Email = email;
-        _phone = phone;
+
+        _ID = ID;
+        _Name = Name;
+        _Phone = Phone;
     }
 
-    int Id()
+    void setID(short ID)
     {
 
-        return _id;
+        _ID = ID;
     }
-    void setFirsName(string first)
+    short getID()
     {
-
-        _firstname = first;
+        return _ID;
     }
-    string FirstName()
+    void setName(string NAme)
     {
 
-        return _firstname;
+        _Name = NAme;
     }
-    void setLastName(string Last)
+    string getName()
     {
-
-        _lastname = Last;
+        return _Name;
     }
-    string LastName()
+    void setPhone(string Phone)
     {
 
-        return _lastname;
+        _Phone = Phone;
     }
-    string Fullname()
+    string getPhone()
     {
-
-        return _firstname + " " + _lastname;
+        return _Phone;
     }
-    void setEmail(string email)
+    virtual void PrintInfo()
     {
 
-        _Email = email;
-    }
-    string Email()
-    {
-
-        return _Email;
-    }
-    void setPhone(string ph)
-    {
-
-        _phone = ph;
-    }
-    string phone()
-    {
-
-        return _phone;
-    }
-    void sendEmail(string subject, string Body)
-    {
-
-        cout << "The following message sent successfully to email: " << _Email << endl;
-        cout << "subject :" << subject << endl;
-        cout << "Body    :" << Body << endl;
-    }
-    void sendSMS(string about)
-    {
-
-        cout << "The following SMS sent successfully to Phone:" << _phone << endl;
-        cout << about << endl;
-    }
-    virtual void print()
-    {
-
-        cout << "info :\n";
-        cout << "-----------------\n";
-        cout << "ID        :" << _id << endl;
-        cout << "First Name:" << _firstname << endl;
-        cout << "Last Name :" << _lastname << endl;
-        cout << "Full Name :" << Fullname() << endl;
-        cout << "Email     :" << _Email << endl;
-        cout << "Phone     :" << _phone << endl;
-        cout << "-----------------\n";
+        cout << "------------------\n";
+        cout << "ID    :" << _ID << endl;
+        cout << "Name  :" << _Name << endl;
+        cout << "Phone :" << _Phone << endl;
+        cout << "----------------------\n";
     }
 };
+
 class clsEmployee : public clsPerson
 {
-    float _salary;
-    string _Department, _Title;
+    double _Salary;
+    string _Department;
 
 public:
-    clsEmployee(int id, string Firstname, string Lastname, string email, string phone, string Tilte, string Department, float salary)
-        : clsPerson(id, Firstname, Lastname, email, phone)
+    clsEmployee(short id, string Name, string Phone, string Departemnt, double Salary)
+        : clsPerson(id, Name, Phone)
     {
-        _salary = salary;
-        _Department = Department;
-        _Title = Tilte;
+        _Department = Departemnt;
+        _Salary = Salary;
     }
-
-    void setTitle(string tilte)
+    void SetSalary(double Salary)
     {
-
-        _Title = tilte;
+        _Salary = Salary;
     }
-    string Title()
-    {
-        return _Title;
-    }
-    void setSalary(float salary)
-    {
-        _salary = salary;
-    }
-    float Salary()
+    double GetSalary()
     {
 
-        return _salary;
+        return _Salary;
     }
-    void setDepartment(string Department)
+    void SetDepartment(string Department)
     {
         _Department = Department;
     }
-    string Department()
+    string GetDepartment()
     {
-
         return _Department;
     }
-    void print()
+    double CalculateAnnualSalary()
     {
-        {
 
-            cout << "info :\n";
-            cout << "-----------------\n";
-            cout << "ID        :" << Id() << endl;
-            cout << "First Name:" << FirstName() << endl;
-            cout << "Last Name :" << LastName() << endl;
-            cout << "Full Name :" << Fullname() << endl;
-            cout << "Email     :" << Email() << endl;
-            cout << "Phone     :" << phone() << endl;
-            cout << "Title     :" << _Title << endl;
-            cout << "Salary    :" << _salary << endl;
-            cout << "Department:" << _Department << endl;
-            cout << "-----------------\n";
-        }
+        return _Salary * 12;
+    }
+    void PrintInfo()
+    {
+
+        cout << "------------------\n";
+        cout << "ID        :" << getID() << endl;
+        cout << "Name      :" << getName() << endl;
+        cout << "Phone     :" << getPhone() << endl;
+        cout << "Department: " << _Department << endl;
+        cout << "Salary    :" << _Salary << endl;
+        cout << "----------------------\n";
     }
 };
-class clsProgrammer : public clsEmployee
+class clsDoctor : public clsEmployee
 {
 
-    string _MainProgrammingLanguage;
+    string _Specialization;
+    short _YearsOfExperience;
 
 public:
-    clsProgrammer(int id, string Firstname, string Lastname, string email, string phone, string Tilte, string Department, float salary, string MainProgrammingLanguage)
-        : clsEmployee(id, Firstname, Lastname, email, phone, Tilte, Department, salary)
+    clsDoctor(short ID, string Name, string Phone, string Departmetn, double Salary, string Specialization, short YearsOfExperience)
+        : clsEmployee(ID, Name, Phone, Departmetn, Salary)
     {
 
-        _MainProgrammingLanguage = MainProgrammingLanguage;
+        _Specialization = Specialization;
+        _YearsOfExperience = YearsOfExperience;
     }
-    void setMainProgrammingLanguage(string MainProgrammingLanguage)
+    void SetSpecialization(string Specialization)
     {
 
-        _MainProgrammingLanguage = MainProgrammingLanguage;
+        _Specialization = Specialization;
     }
-    string MainProgrammingLanguage()
+    string GetSpecialization()
     {
 
-        return _MainProgrammingLanguage;
+        return _Specialization;
     }
-
-    void print()
+    void SetYearsOfExperience(short YearsOfExperience)
     {
-        cout << "info :\n";
-        cout << "----------------------------------------------------\n";
-        cout << "ID                     :" << Id() << endl;
-        cout << "First Name             :" << FirstName() << endl;
-        cout << "Last Name              :" << LastName() << endl;
-        cout << "Full Name              :" << Fullname() << endl;
-        cout << "Email                  :" << Email() << endl;
-        cout << "Phone                  :" << phone() << endl;
-        cout << "Title                  :" << Title() << endl;
-        cout << "Salary                 :" << Salary() << endl;
-        cout << "Department             :" << Department() << endl;
-        cout << "MainProgrammingLanguage:" << _MainProgrammingLanguage << endl;
-        cout << "-----------------------------------------------------\n";
+
+        _YearsOfExperience = YearsOfExperience;
+    }
+    short GetYearsOfExperience()
+    {
+        return _YearsOfExperience;
+    };
+    int bonus()
+    {
+
+        return _YearsOfExperience * 50;
+    }
+    void PrintInfo()
+    {
+
+        cout << "\n----------- Doctor Information -----------------\n";
+        cout << "ID                  :" << getID() << endl;
+        cout << "Name                :" << getName() << endl;
+        cout << "Phone               :" << getPhone() << endl;
+        cout << "Department          : " << GetDepartment() << endl;
+        cout << "Salary              :" << GetSalary() << endl;
+        cout << "Specialization      :" << _Specialization << endl;
+        cout << "Years Of Experience :" << _YearsOfExperience << endl;
+        cout << "Bonus               :" << bonus() << endl;
+        cout << "\n---------------------------------------------------\n";
+    }
+};
+
+class clsPatient : public clsPerson
+{
+    string _Disease;
+    string _AssignedDoctorName;
+
+public:
+    clsPatient(short id, string Name, string Phone, string Disease, string AssignedDoctorName)
+        : clsPerson(id, Name, Phone)
+    {
+        _Disease = Disease;
+        _AssignedDoctorName = AssignedDoctorName;
+    }
+    void SetDisease(string Disease)
+    {
+
+        _Disease = Disease;
+    }
+    string GetDisease()
+    {
+        return _Disease;
+    }
+    void SetAssignedDoctorName(string AssignedDoctorName)
+    {
+
+        _AssignedDoctorName = AssignedDoctorName;
+    }
+    string GetAssignedDoctorName()
+    {
+        return _AssignedDoctorName;
+    }
+    void PrintInfo()
+    {
+        cout << "\n------------- Patient Information ---------------\n";
+        cout << "ID                    :" << getID() << endl;
+        cout << "Name                  :" << getName() << endl;
+        cout << "Phone                 :" << getPhone() << endl;
+        cout << "Disease               :" << _Disease << endl;
+        cout << "AssignedDoctorName    :" << _AssignedDoctorName << endl;
+        cout << "\n---------------------------------------------------\n";
     }
 };
 int main()
 {
-
-    clsProgrammer pro1(10, "Loay", "Alarify", "loa@gmail", "777", "Eng", "IT", 2000, "C++");
-    // pro1.print();
-    clsEmployee emp1(12, "Nezar", "anwar", "wadad@gmail", "771846606", "CEO", "CY", 5000);
-    // emp1.print();
-    clsPerson* per = &pro1;
-    per->print();
-    clsPerson* per2 = &emp1;
-    per2->print();
+    clsDoctor Doctor(101, "Dr.Ahmed", "777123456", "Surgery", 1500, "Orthopedic", 8);
+    clsPatient Patient(202, "Hassan", "777777771", "Knee Pain", "Dr.Ahmed");
+    clsPerson* person = &Doctor;
+    clsPerson* person2 = &Patient;
+    person->PrintInfo();
+    person2->PrintInfo();
 }
