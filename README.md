@@ -66,7 +66,6 @@ clsProgrammer
 * **Private Members**
 
   * `_id`, `_firstname`, `_lastname`, `_Email`, `_phone`
-
 * **Key Methods**
 
   * `FirstName()`, `LastName()`, `Fullname()`
@@ -82,7 +81,6 @@ clsProgrammer
 * **Additional Members**
 
   * `_Title`, `_Department`, `_salary`
-
 * **Concepts Used**
 
   * Inheritance
@@ -97,7 +95,6 @@ clsProgrammer
 * **Additional Member**
 
   * `_MainProgrammingLanguage`
-
 * **Concepts Used**
 
   * Multi-level inheritance
