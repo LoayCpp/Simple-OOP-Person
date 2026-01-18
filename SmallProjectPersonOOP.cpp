@@ -80,7 +80,7 @@ public:
         cout << "The following SMS sent successfully to Phone:" << _phone << endl;
         cout << about << endl;
     }
-    void print()
+    virtual void print()
     {
 
         cout << "info :\n";
@@ -198,5 +198,11 @@ int main()
 {
 
     clsProgrammer pro1(10, "Loay", "Alarify", "loa@gmail", "777", "Eng", "IT", 2000, "C++");
-    pro1.print();
+    // pro1.print();
+    clsEmployee emp1(12, "Nezar", "anwar", "wadad@gmail", "771846606", "CEO", "CY", 5000);
+    // emp1.print();
+    clsPerson* per = &pro1;
+    per->print();
+    clsPerson* per2 = &emp1;
+    per2->print();
 }
