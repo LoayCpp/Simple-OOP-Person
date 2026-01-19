@@ -48,11 +48,12 @@ This project is ideal for learners who want to **move from basic OOP concepts to
 ## 🏗️ Class Hierarchy
 
 ```
-clsPerson
-   ↓
-clsEmployee
-   ↓
-clsProgrammer
+     clsPerson 
+     ↓        ↓
+clsEmployee  clsPatient 
+    ↓
+clsDoctor
+        
 ```
 
 ---
@@ -88,40 +89,28 @@ clsProgrammer
 
 ---
 
-### 🔹 `clsProgrammer` (inherits from `clsEmployee`)
+### 🔹 `clsclsDoctor` (inherits from `clsEmployee`)
 
-**Specialized employee with programming skills**
-
-* **Additional Member**
-
-  * `_MainProgrammingLanguage`
-* **Concepts Used**
-
-  * Multi-level inheritance
-  * Extended method overriding
-  * Runtime polymorphism
-
----
+ * Struct Used: stJobDetails (contains _Specialization, _YearsOfExperience)
 
 ## 💻 Usage Example
 
 ```cpp
 int main()
 {
-    clsProgrammer pro1(
-        10,
-        "Loay",
-        "Alarify",
-        "loa@gmail",
-        "777",
-        "Engineer",
-        "IT",
-        2000,
-        "C++"
-    );
+clsDoctor Doctor(101, "Dr.Ahmed", "777123456", "Surgery", 1500, "Orthopedic", 8);
+clsPatient Patient(202, "Hassan", "777777771", "Knee Pain", "Dr.Ahmed");
 
-    pro1.print();
-}
+
+clsPerson* person1 = &Doctor;
+clsPerson* person2 = &Patient;
+
+
+person1->PrintInfo();
+Doctor.PrintReport();
+
+
+person2->PrintInfo();
 ```
 
 ---
@@ -136,7 +125,14 @@ During the development of this project, I learned and practiced the following co
 * The importance of **constructor chaining** with initializer lists.
 * The difference between **compile-time vs runtime polymorphism**.
 * Writing extensible and reusable OOP-based code.
-* Applying encapsulation to protect internal data.
+* Applying encapsulation to protect internal data.   
+* Using **structs inside classes** to organize related data logically.
+* Creating **interfaces** with **pure virtual functions** to enforce standard behavior.
+* Implementing **runtime polymorphism** using base class and interface pointers.
+* Using **friend classes** for selective access to private data while maintaining encapsulation.
+* Enhancing **data encapsulation** with structured and organized class members.
+
+These concepts helped me write cleaner, more flexible, and maintainable object-oriented code.
 
 ---
 
@@ -150,7 +146,7 @@ By studying this project, you will learn:
 4. **Method Overriding** – Customizing behavior in derived classes.
 5. **Abstraction** – Exposing only what the user needs.
 6. **Polymorphism** – Achieving dynamic behavior at runtime.
-
+7. **interfaces**  -  with `pure virtual functions` to enforce standard behavior.
 ---
 
 ## 📌 Suggested Improvements
