@@ -17,8 +17,8 @@ This project is ideal for learners who want to **move from basic OOP concepts to
 
 * **🧬 Inheritance**
 
-  * `clsEmployee` inherits from `clsPerson`
-  * `clsProgrammer` inherits from `clsEmployee`
+  * `clsEmployee`,` clsPatient` inherits from `clsPerson`
+  * `clsDoctor` inherits from `clsEmployee`
 
 * **🔁 Method Overriding**
 
@@ -93,9 +93,21 @@ clsDoctor
 
  * Struct Used: stJobDetails (contains _Specialization, _YearsOfExperience)
 
-## 💻 Usage Example
+## 💻 Usage Example   
+
+* **using header (.h)** 
+
 
 ```cpp
+#include <iostream>
+#include "clsPerson.h"
+#include "clsCommunication.h"
+#include "clsEmployee.h"
+#include "clsPatient.h"
+#include "clsDoctor.h"
+using namespace std;
+
+
 int main()
 {
 clsDoctor Doctor(101, "Dr.Ahmed", "777123456", "Surgery", 1500, "Orthopedic", 8);
@@ -131,7 +143,7 @@ During the development of this project, I learned and practiced the following co
 * Implementing **runtime polymorphism** using base class and interface pointers.
 * Using **friend classes** for selective access to private data while maintaining encapsulation.
 * Enhancing **data encapsulation** with structured and organized class members.
-
+* Structured **Project Organization** – Learned to separate each class into its own `header (.h)` and `implementation (.cpp)` files, making the code *cleaner*, *more readable*, and *easier to maintain*.
 These concepts helped me write cleaner, more flexible, and maintainable object-oriented code.
 
 ---

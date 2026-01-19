@@ -5,6 +5,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\SmallProjectPersonOOP.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|solutionrelative:SmallProjectPersonOOP.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsEmployee.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|solutionrelative:clsEmployee.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsPerson.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|solutionrelative:clsPerson.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsPatient.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|solutionrelative:clsPatient.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsDoctor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|solutionrelative:clsDoctor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsCommunication.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{168173BA-1989-48E0-9BAD-E43700EBA710}|SmallProjectPersonOOP.vcxproj|solutionrelative:clsCommunication.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +34,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clsPatient.h",
+              "DocumentMoniker": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsPatient.h",
+              "RelativeDocumentMoniker": "clsPatient.h",
+              "ToolTip": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsPatient.h",
+              "RelativeToolTip": "clsPatient.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-19T19:13:16.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "clsDoctor.h",
+              "DocumentMoniker": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsDoctor.h",
+              "RelativeDocumentMoniker": "clsDoctor.h",
+              "ToolTip": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsDoctor.h",
+              "RelativeToolTip": "clsDoctor.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-19T19:11:15.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsEmployee.h",
+              "DocumentMoniker": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsEmployee.h",
+              "RelativeDocumentMoniker": "clsEmployee.h",
+              "ToolTip": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsEmployee.h",
+              "RelativeToolTip": "clsEmployee.h",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-19T19:08:53.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "clsCommunication.h",
+              "DocumentMoniker": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsCommunication.h",
+              "RelativeDocumentMoniker": "clsCommunication.h",
+              "ToolTip": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsCommunication.h",
+              "RelativeToolTip": "clsCommunication.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-19T19:07:43.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsPerson.h",
+              "DocumentMoniker": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsPerson.h",
+              "RelativeDocumentMoniker": "clsPerson.h",
+              "ToolTip": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\clsPerson.h",
+              "RelativeToolTip": "clsPerson.h",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-19T19:04:26.489Z"
             },
             {
               "$type": "Document",
@@ -28,7 +108,7 @@
               "RelativeDocumentMoniker": "SmallProjectPersonOOP.cpp",
               "ToolTip": "C:\\Users\\loaya\\Desktop\\GitHubLoay\\Simple-OOP-Person\\SmallProjectPersonOOP.cpp",
               "RelativeToolTip": "SmallProjectPersonOOP.cpp",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAAAHgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-17T05:56:16.648Z",
               "EditorCaption": ""

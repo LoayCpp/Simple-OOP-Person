@@ -129,6 +129,13 @@
   <ItemGroup>
     <ClCompile Include="SmallProjectPersonOOP.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="clsCommunication.h" />
+    <ClInclude Include="clsDoctor.h" />
+    <ClInclude Include="clsEmployee.h" />
+    <ClInclude Include="clsPatient.h" />
+    <ClInclude Include="clsPerson.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
